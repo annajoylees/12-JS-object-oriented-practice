@@ -50,9 +50,27 @@ function expect(target) {
 //
 // Only add code to *THIS* section!
 
-// ????????
-// ????????
-// ????????
+function Dog(obj) {
+  this.status = "normal"
+    if (obj) {
+      this.color = obj.color
+    if (obj.hungry !== undefined) {
+      this.hungry = obj.hungry
+    } else {
+      this.hungry = true
+    }
+  }
+}
+
+
+
+Human.prototype.pet = function(obj) {
+  obj.status = "happy"
+}
+
+Human.prototype.feed = function(obj) {
+  obj.hungry = false
+}
 
 //        __
 //   ____/ /___  ____ ______
@@ -61,16 +79,16 @@ function expect(target) {
 // \__,_/\____/\__, /____/
 //            /____/
 
-var sadie = new Dog({
+let sadie = new Dog({
   color: 'black',
   hungry: false,
 })
 
-var moonshine = new Dog({
+let moonshine = new Dog({
   color: 'blue-red',
 })
 
-var atticus = new Dog()
+let atticus = new Dog()
 
 //     __
 //    / /_  __  ______ ___  ____ _____  _____
@@ -78,9 +96,9 @@ var atticus = new Dog()
 //  / / / / /_/ / / / / / / /_/ / / / (__  )
 // /_/ /_/\__,_/_/ /_/ /_/\__,_/_/ /_/____/
 
-var mason = new Human()
+let mason = new Human()
 
-var julia = new Human({
+let julia = new Human({
   cool: true,
 })
 
